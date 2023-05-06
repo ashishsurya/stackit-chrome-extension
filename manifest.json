@@ -1,0 +1,20 @@
+{
+  "name": "My Content Script Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/spreadsheets/d/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["https://www.googleapis.com/*", "identity"],
+  "oauth2": {
+    "client_id": "355118377666-6d3f8jnt8btivkhljnhtj3e9882t19g2.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/drive"]
+  }
+}
